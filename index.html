@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Dashboard</title>
+</head>
+<body>
+<header>
+  <h1>Dashboard Interativo</h1>
+  <div id="menu-toggle" title="Toggle Menu" aria-label="Abrir/Fechar menu">&#9776;</div>
+</header>
+<nav class="sidebar closed" id="sidebar" aria-label="Barra de navegação principal">
+  <a href="#" class="nav-link active" data-section="overview">Visão Geral</a>
+  <a href="#" class="nav-link" data-section="sales">Vendas</a>
+  <a href="#" class="nav-link" data-section="customers">Clientes</a>
+  <a href="#" class="nav-link" data-section="products">Produtos</a>
+  <a href="#" class="nav-link" data-section="settings">Configurações</a>
+</nav>
+<main id="main-content" class="full-width" tabindex="-1">
+
+  <section id="overview" class="section active-section">
+    <div class="cards" aria-label="Indicadores principais">
+      <article class="card" aria-live="polite" aria-atomic="true">
+        <h3>Receita Total</h3>
+        <p class="value" id="total-revenue">R$ 125.000</p>
+      </article>
+      <article class="card" aria-live="polite" aria-atomic="true">
+        <h3>Novos Clientes</h3>
+        <p class="value" id="new-clients">230</p>
+      </article>
+      <article class="card" aria-live="polite" aria-atomic="true">
+        <h3>Produtos Vendidos</h3>
+        <p class="value" id="products-sold">1.150</p>
+      </article>
+      <article class="card" aria-live="polite" aria-atomic="true">
+        <h3>Feedback Positivo</h3>
+        <p class="value" id="positive-feedback">89%</p>
+      </article>
+    </div>
+    <div class="filter-group" aria-label="Filtro para gráfico de vendas mensais">
+      <label for="year-select">Selecionar ano:</label>
+      <select id="year-select" aria-controls="monthly-sales-chart">
+        <option value="2023" selected>2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+      </select>
+    </div>
+    <div class="charts" aria-label="Gráficos da visão geral">
+      <section class="chart-container">
+        <h3>Vendas Mensais (R$)</h3>
+        <canvas id="monthly-sales-chart" role="img" aria-label="Gráfico de barras das vendas mensais"></canvas>
+      </section>
+      <section class="chart-container">
+        <h3>Distribuição de Produtos</h3>
+        <canvas id="product-distribution-chart" role="img" aria-label="Gráfico de pizza da distribuição de produtos"></canvas>
+      </section>
+    </div>
+  </section>
+
+  <section id="sales" class="section" hidden>
+    <h2>Vendas</h2>
+    <p>Conteúdo da seção de vendas será adicionado em futuras versões.</p>
+  </section>
+
+  <section id="customers" class="section" hidden>
+    <h2>Clientes</h2>
+    <p>Conteúdo da seção de clientes será adicionado em futuras versões.</p>
+  </section>
+
+  <section id="products" class="section" hidden>
+    <h2>Produtos</h2>
+    <p>Conteúdo da seção de produtos será adicionado em futuras versões.</p>
+  </section>
+
+  <section id="settings" class="section" hidden>
+    <h2>Configurações</h2>
+    <p>Conteúdo da seção de configurações será adicionado em futuras versões.</p>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script/script.js"></script>
+</body>
+</html>
+
